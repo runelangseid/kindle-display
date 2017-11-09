@@ -1,0 +1,73 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <!--transform="translate(600) rotate(90)" -->
+        <!--rect fill="blue" stroke-width="1" height="800" width="600" y="0" x="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke="#000000"-->
+
+        <symbol id="IconMorning">
+		    <path fill="currentColor" opacity="0.5" stroke-width="0" stroke-opacity="0" d="M85.5,1.8c0,22.4-18.1,40.5-40.5,40.5S4.5,24.2,4.5,1.8H85.5z"></path>
+		    <path fill="currentColor" opacity="0.95" stroke-width="0" stroke-opacity="0" d="M79,1.8c0,18.8-15.2,34-34,34s-34-15.2-34-34H79z"></path>
+		    <path stroke-width="2" stroke-miterlimit="10" d="M73.4,1.8c0,15.7-12.7,28.4-28.3,28.4S16.7,17.5,16.7,1.8H73.4z"></path>
+		    <path fill="#333333" stroke-width="0" d="M88.3,2.7H1.7C0.8,2.7,0,2.1,0,1.4S0.8,0,1.7,0h86.6C89.2,0,90,0.6,90,1.4S89.2,2.7,88.3,2.7z"></path>
+	    </symbol>
+        <symbol id="IconAfterNoon">
+		    <path fill="currentColor" opacity="0.5" stroke-width="0" stroke-opacity="0" d="M85.5,1.8c0,22.4-18.1,40.5-40.5,40.5S4.5,24.2,4.5,1.8H85.5z"></path>
+		    <path fill="currentColor" opacity="0.95" stroke-width="0" stroke-opacity="0" d="M79,1.8c0,18.8-15.2,34-34,34s-34-15.2-34-34H79z"></path>
+		    <path stroke-width="2" stroke-miterlimit="10" d="M73.4,1.8c0,15.7-12.7,28.4-28.3,28.4S16.7,17.5,16.7,1.8H73.4z"></path>
+		    <path fill="#333333" stroke-width="0" d="M88.3,2.7H1.7C0.8,2.7,0,2.1,0,1.4S0.8,0,1.7,0h86.6C89.2,0,90,0.6,90,1.4S89.2,2.7,88.3,2.7z"></path>
+	    </symbol>
+        <symbol id="IconEvening">
+		    <path fill="currentColor" opacity="0.5" stroke-width="0" stroke-opacity="0" d="M85.5,1.8c0,22.4-18.1,40.5-40.5,40.5S4.5,24.2,4.5,1.8H85.5z"></path>
+		    <path fill="currentColor" opacity="0.95" stroke-width="0" stroke-opacity="0" d="M79,1.8c0,18.8-15.2,34-34,34s-34-15.2-34-34H79z"></path>
+		    <path stroke-width="2" stroke-miterlimit="10" d="M73.4,1.8c0,15.7-12.7,28.4-28.3,28.4S16.7,17.5,16.7,1.8H73.4z"></path>
+		    <path fill="#333333" stroke-width="0" d="M88.3,2.7H1.7C0.8,2.7,0,2.1,0,1.4S0.8,0,1.7,0h86.6C89.2,0,90,0.6,90,1.4S89.2,2.7,88.3,2.7z"></path>
+	    </symbol>
+
+
+        <use href="#IconMorning" class="sun-primitive" x="75" y="120" width="150" height="150" transform="translate(0,0) scale(1.5,1.5)"></use>
+        <use href="#IconAfterNoon" class="sun-primitive" x="220" y="120" width="150" height="150" transform="translate(0,0) scale(1.5,1.5)"></use>
+        <use href="#IconEvening" class="sun-primitive" x="410" y="120" width="150" height="150" transform="translate(0,0) scale(1.5,1.5)"></use>
+
+
+        <g id="svg_22" transform="scale(3.25) translate(5.055 20.166)">ICON_ONE</g>
+        <title>Weather</title>
+        <g font-family="DejaVu Sans" id="weather">
+            <text font-size="35px" y="50" x="30" text-anchor="start" id="today">Today</text>
+
+            <text font-size="25px" y="110" x="180" text-anchor="middle">Morning</text>
+            <text font-size="25px" y="110" x="400" text-anchor="middle">Afternoon</text>
+            <text font-size="25px" y="110" x="680" text-anchor="middle">Evening</text>
+
+            <text font-size="20px" y="270" x="180" text-anchor="middle">Alert_Morning</text>
+            <text font-size="20px" y="270" x="400" text-anchor="middle">Alert_Afternoon</text>
+            <text font-size="20px" y="270" x="680" text-anchor="middle">Alert_Evening</text>
+
+            <!--
+            <text font-size="60px" y="209" x="526" text-anchor="end" id="svg_6">HIGH_ONE</text>
+            <text font-size="64px" y="182" x="548" text-anchor="middle" id="svg_7">°C</text>
+            <text font-size="35px" y="275" x="440" text-anchor="middle" id="svg_8">Mínima:</text>
+            <text font-size="100px" y="359" x="526" text-anchor="end" id="svg_9">LOW_ONE</text>
+            <text font-size="64px" y="333" x="548" text-anchor="middle" id="svg_10">°C</text>
+            -->
+        </g>
+
+
+
+        <g>
+            <text fill="black" font-size="32px" y="465" x="30" text-anchor="start" id="todo">Hva skjer:</text>
+            <text id="svg_1"  xml:space="preserve" text-anchor="middle" font-family="null" font-size="17" y="510" x="100" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black" font-weight="bold">hour0</text>
+            <text id="svg_11" xml:space="preserve" text-anchor="middle" font-family="null" font-size="17" y="530" x="100" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black" font-weight="bold">hour1</text>
+            <text id="svg_12" xml:space="preserve" text-anchor="middle" font-family="null" font-size="17" y="550" x="100" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black" font-weight="bold">hour2</text>
+            <text id="svg_13" xml:space="preserve" text-anchor="middle" font-family="null" font-size="17" y="570" x="100" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black" font-weight="bold">hour3</text>
+            <text id="svg_14" xml:space="preserve" text-anchor="middle" font-family="null" font-size="17" y="590" x="100" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black" font-weight="bold">hour4</text>
+            <text id="svg_15" xml:space="preserve" text-anchor="start"  font-family="null" font-size="17" y="510" x="170" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black">Name0</text>
+            <text id="svg_16" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="null" font-size="17" y="530" x="170" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black">Name1</text>
+            <text id="svg_17" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="null" font-size="17" y="550" x="170" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black">Name2</text>
+            <text id="svg_18" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="null" font-size="17" y="570" x="170" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black">Name3</text>
+            <text id="svg_19" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="null" font-size="17" y="590" x="170" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black">Name4</text>
+        </g>
+
+        <text id="svg_20" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="null" font-size="17" y="529" x="350" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black">AllDay0</text>
+        <text id="svg_21" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="null" font-size="17" y="579" x="350" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" fill="black">AllDay1</text>
+        <path id="line" d="m329,470l0,321l3,0l0,-321l-3,0z" fill="black"/>
+    </g>
+</svg>

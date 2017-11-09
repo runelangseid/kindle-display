@@ -1,0 +1,11 @@
+*.pyc
+*.DS_Store
+
+# Local settings
+.env
+
+# temp files
+._*
+
+# pycharm
+.idea
