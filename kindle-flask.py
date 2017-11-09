@@ -55,7 +55,7 @@ def _generate_svg():
     codecs.open(filename, 'w', encoding='utf-8').write(output)
     return filename
 
-@app.route('/png')
+@app.route('/')
 def show_png():
     svg = _generate_svg()
 
