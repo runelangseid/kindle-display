@@ -41,7 +41,7 @@ app = Flask(__name__)
 def _generate_svg():
     print('_generate_svg')
 
-    today = datetime.datetime.now().strftime("%B %d - kl %H:%M")
+    today = datetime.datetime.now().strftime("%B %d - kl %H:%M:%s")
 
     # Open SVG to process
     output = codecs.open('static/templates/landscape.svg', 'r', encoding='utf-8').read()
