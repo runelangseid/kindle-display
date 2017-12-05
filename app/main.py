@@ -71,8 +71,9 @@ def show_png():
 
 
     # Rotate
-    drawing.translate(600, 0)
-    drawing.rotate(90)
+    #drawing.translate(600, 0)
+    drawing.translate(0, 800)
+    drawing.rotate(-90)
     d = Drawing(600, 800)
     d.add(drawing)
     drawing = d
