@@ -6,6 +6,8 @@ import datetime
 
 from svglib.svglib import svg2rlg
 from reportlab.graphics import renderPDF, renderPM
+from reportlab.graphics.shapes import Image, Drawing
+from reportlab.platypus.flowables import Image
 
 app = Flask(__name__)
 
@@ -25,7 +27,6 @@ app = Flask(__name__)
 #     # Write output
 #     codecs.open('static/after-weather.svg', 'w', encoding='utf-8').write(output)
 #
-#
 #     # weather = Yr(location_name='Norge/Telemark/Skien/Skien')
 #     # now = weather.now(as_json=True)
 #     # weather = Yr(location_name='Norge/Telemark/Skien/Skien', forecast_link='forecast_hour_by_hour')
@@ -39,6 +40,10 @@ app = Flask(__name__)
 
 
 def _generate_svg():
+    '''
+    Modifies the svn with the information we want
+    :return:
+    '''
     print('_generate_svg')
 
     today = datetime.datetime.now().strftime("%B %d - kl %H:%M:%s")
@@ -55,16 +60,26 @@ def _generate_svg():
     codecs.open(filename, 'w', encoding='utf-8').write(output)
     return filename
 
-@app.route('/')
+@app.route('/index.png')
+@app.route('/weather-script-output.png')
 def show_png():
     svg = _generate_svg()
 
-    #drawing = svg2rlg("static/after-weather.svg")
+    # Disse som brukes
     drawing = svg2rlg(svg)
-    #renderPDF.drawToFile(drawing, "static/after.pdf")
-    renderPM.drawToFile(drawing, "static/image.png")
+    renderPM.drawToFile(drawing, "static/image.png", fmt='png')
 
-    #return render_template('show_image.html', entries=None)
+
+    # Rotate
+    drawing.translate(600, 0)
+    drawing.rotate(90)
+    d = Drawing(600, 800)
+    d.add(drawing)
+    drawing = d
+
+
+    renderPM.drawToFile(drawing, "static/image.png", fmt='png')
+
     return send_file("static/image.png", mimetype='image/png')
 
 if __name__ == '__main__':
