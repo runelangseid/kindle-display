@@ -1,6 +1,7 @@
 from flask import Flask, render_template, send_file
 from yr.libyr import Yr
 import codecs
+import subprocess
 
 import datetime
 
@@ -80,6 +81,9 @@ def show_png():
 
 
     renderPM.drawToFile(drawing, "static/image.png", fmt='png')
+
+    # pngcrush -q -c 0 weather-processed.png weather-script-output.png > /dev/null 2>&1
+    subprocess.call('/usr/local/bin/pngcrush -q -c 0 static/image.png static/image.png > /dev/null 2>&1', shell=True)
 
     return send_file("static/image.png", mimetype='image/png')
 
