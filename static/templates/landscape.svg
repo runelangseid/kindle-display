@@ -1,8 +1,9 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g>
         <!--transform="translate(600) rotate(90)" -->
         <!--rect fill="blue" stroke-width="1" height="800" width="600" y="0" x="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke="#000000"-->
 
+        <!--
         <symbol id="IconMorning">
 		    <path fill="currentColor" opacity="0.5" stroke-width="0" stroke-opacity="0" d="M85.5,1.8c0,22.4-18.1,40.5-40.5,40.5S4.5,24.2,4.5,1.8H85.5z"></path>
 		    <path fill="currentColor" opacity="0.95" stroke-width="0" stroke-opacity="0" d="M79,1.8c0,18.8-15.2,34-34,34s-34-15.2-34-34H79z"></path>
@@ -21,6 +22,7 @@
 		    <path stroke-width="2" stroke-miterlimit="10" d="M73.4,1.8c0,15.7-12.7,28.4-28.3,28.4S16.7,17.5,16.7,1.8H73.4z"></path>
 		    <path fill="#333333" stroke-width="0" d="M88.3,2.7H1.7C0.8,2.7,0,2.1,0,1.4S0.8,0,1.7,0h86.6C89.2,0,90,0.6,90,1.4S89.2,2.7,88.3,2.7z"></path>
 	    </symbol>
+        -->
 
 
         <use href="#IconMorning" class="sun-primitive" x="75" y="120" width="150" height="150" transform="translate(0,0) scale(1.5,1.5)"></use>
@@ -31,15 +33,33 @@
         <g id="svg_22" transform="scale(3.25) translate(5.055 20.166)">ICON_ONE</g>
         <title>Weather</title>
         <g font-family="DejaVu Sans" id="weather">
-            <text font-size="35px" y="50" x="30" text-anchor="start" id="today">Today</text>
+            <text font-size="50px" y="60" x="30" text-anchor="start" id="today">Today</text>
 
-            <text font-size="25px" y="110" x="180" text-anchor="middle">Morning</text>
-            <text font-size="25px" y="110" x="400" text-anchor="middle">Afternoon</text>
-            <text font-size="25px" y="110" x="680" text-anchor="middle">Evening</text>
+            <text font-size="40px" y="130" x="160" text-anchor="middle">Time_0</text>
+            <text font-size="40px" y="130" x="400" text-anchor="middle">Time_1</text>
+            <text font-size="40px" y="130" x="640" text-anchor="middle">Time_2</text>
 
-            <text font-size="20px" y="270" x="180" text-anchor="middle">Alert_Morning</text>
-            <text font-size="20px" y="270" x="400" text-anchor="middle">Alert_Afternoon</text>
-            <text font-size="20px" y="270" x="680" text-anchor="middle">Alert_Evening</text>
+
+
+
+
+            <g transform="translate(110 130)">
+                <text>Icon_1</text>
+            </g>
+            <g transform="translate(350 130)">
+                <text>Icon_2</text>
+            </g>
+            <g transform="translate(585 130)">
+                <text>Icon_3</text>
+            </g>
+
+
+
+
+
+            <text font-size="20px" y="270" x="160" text-anchor="middle">Temp_0</text>
+            <text font-size="20px" y="270" x="400" text-anchor="middle">Temp_1</text>
+            <text font-size="20px" y="270" x="640" text-anchor="middle">Temp_2</text>
 
             <!--
             <text font-size="60px" y="209" x="526" text-anchor="end" id="svg_6">HIGH_ONE</text>
