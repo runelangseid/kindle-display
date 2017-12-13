@@ -43,21 +43,21 @@
 
 
 
-            <g transform="scale(1.5) translate(55 80)">
+            <g transform="scale(1.5) translate(55 90)">
                 <text>Icon_1</text>
             </g>
-            <g transform="scale(1.5) translate(215 80)">
+            <g transform="scale(1.5) translate(215 90)">
                 <text>Icon_2</text>
             </g>
-            <g transform="scale(1.5) translate(375 80)">
+            <g transform="scale(1.5) translate(375 90)">
                 <text>Icon_3</text>
             </g>
 
 
 
-            <text font-size="50px" y="320" x="160" text-anchor="middle">Temp_0</text>
-            <text font-size="50px" y="320" x="400" text-anchor="middle">Temp_1</text>
-            <text font-size="50px" y="320" x="640" text-anchor="middle">Temp_2</text>
+            <text font-size="50px" y="330" x="160" text-anchor="middle">Temp_0</text>
+            <text font-size="50px" y="330" x="400" text-anchor="middle">Temp_1</text>
+            <text font-size="50px" y="330" x="640" text-anchor="middle">Temp_2</text>
 
             <!--
             <text font-size="60px" y="209" x="526" text-anchor="end" id="svg_6">HIGH_ONE</text>
