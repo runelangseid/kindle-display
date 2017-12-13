@@ -7,3 +7,4 @@
 # Credit
 
 * https://github.com/cathay4t/kindle-weather
+* Symbols from https://github.com/YR/weather-symbols

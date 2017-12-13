@@ -70,7 +70,7 @@ def _find_time(d):
         c = [9, 15, 21]
     elif (h > 3):
         c = [6, 12, 18]
-    elif (h > 0):
+    elif (h >= 0):
         c = [3, 9, 15]
     return c
 
@@ -94,13 +94,14 @@ def _generate_svg():
 
     # Set times
     t = _find_time(d)
+    print('t', t)
     output = output.replace('Time_0', "%i%s" % ((t[0]),':00'))
     output = output.replace('Time_1', "%i%s" % ((t[1]),':00'))
     output = output.replace('Time_2', "%i%s" % ((t[2]),':00'))
 
     forecasts = []
-    weather = Yr(location_name='Norge/Telemark/Skien/Skien')
-    now = weather.now(as_json=True)
+    #weather = Yr(location_name='Norge/Telemark/Skien/Skien')
+    #now = weather.now(as_json=True)
     weather = Yr(location_name='Norge/Telemark/Skien/Skien', forecast_link='forecast_hour_by_hour')
     for forecast in weather.forecast(as_json=True):
         f = json.loads(forecast)
@@ -178,9 +179,9 @@ def show_png():
     renderPM.drawToFile(drawing, "static/image.png", fmt='png')
 
     # Make png compatible with Kindle
-    subprocess.call('/usr/local/bin/pngcrush -q -c 0 static/image.png static/image.png > /dev/null 2>&1', shell=True)
+    subprocess.call('/usr/local/bin/pngcrush -q -c 0 static/image.png static/image2.png > /dev/null 2>&1', shell=True)
 
-    return send_file("static/image.png", mimetype='image/png')
+    return send_file("static/image2.png", mimetype='image/png')
 
 @app.route('/weather.svg')
 def show_svg():
@@ -189,6 +190,10 @@ def show_svg():
     filename = _generate_svg()
 
     return send_file(filename, mimetype='image/svg+xml')
+
+@app.route('/')
+def show_index():
+    return render_template('show_html.html', entries=None)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
