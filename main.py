@@ -115,11 +115,12 @@ def _generate_svg():
     output = output.replace('Temp_0', "%s%s" % (forecasts[0]['temperature']['@value'], '°C'))
     output = output.replace('Temp_1', "%s%s" % (forecasts[1]['temperature']['@value'], '°C'))
     output = output.replace('Temp_2', "%s%s" % (forecasts[2]['temperature']['@value'], '°C'))
-    print('forecasts', forecasts[2])
+    print('forecasts 0', forecasts[0])
+    print('forecasts 1', forecasts[1])
+    print('forecasts 2', forecasts[2])
 
     # Insert symbols
-    n = forecasts[0]['symbol']['@number']
-    n = str(n).zfill(2)
+    n = forecasts[0]['symbol']['@var']
     s = "static/symbols/%s.svg" % (n)
     symbol = codecs.open(s, 'r', encoding='utf-8').read()
     symbol = symbol.replace('viewBox="0 0 100 100"', "%s" % ('viewBox="0 0 800 600"'))
@@ -127,16 +128,14 @@ def _generate_svg():
     print('s', s)
 
 
-    n = forecasts[1]['symbol']['@number']
-    n = str(n).zfill(2)
+    n = forecasts[1]['symbol']['@var']
     s = "static/symbols/%s.svg" % (n)
     symbol = codecs.open(s, 'r', encoding='utf-8').read()
     symbol = symbol.replace('viewBox="0 0 100 100"', "%s" % ('viewBox="0 0 800 600"'))
     output = output.replace('<text>Icon_2</text>', "%s" % (symbol))
     print('s', s)
 
-    n = forecasts[2]['symbol']['@number']
-    n = str(n).zfill(2)
+    n = forecasts[1]['symbol']['@var']
     s = "static/symbols/%s.svg" % (n)
     symbol = codecs.open(s, 'r', encoding='utf-8').read()
     symbol = symbol.replace('viewBox="0 0 100 100"', "%s" % ('viewBox="0 0 800 600"'))
